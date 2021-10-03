@@ -1,0 +1,6 @@
+product_area_id,product_area_name,profit_margin
+1,Non-Food,0.25
+2,Vegetables,0.18
+3,Fruit,0.14
+4,Dairy,0.19
+5,Meat,0.11

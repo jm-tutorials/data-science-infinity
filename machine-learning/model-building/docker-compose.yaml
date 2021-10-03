@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  #container name
+    postgres_db:
+        container_name: postgres_db
+        image: postgres
+
+        # open port so host machine can access
+        ports:
+          - "5432:5432"
+        
+        # configure Postgres environment variables
+        environment:
+          POSTGRES_DB: groceries
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+        
+        volumes:
+          - $PWD/data:/infile
+          - pg_data:/var/lib/postgresql/data/
+
+networks:
+  default:
+    external:
+      name: my-network
+
+volumes:
+  pg_data:

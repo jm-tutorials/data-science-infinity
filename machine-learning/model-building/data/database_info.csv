@@ -1,0 +1,21 @@
+Table,Description,Columns,Column Info
+customer_details,Contains information around the customer.  Table is at customer level,customer_id,Unique ID for each customer
+,,distance_from_store,Distance in miles from the store to the customers home
+,,gender,Customer gender
+,,credit_score,Customer credit score
+transactions,"Contains all transaction information for customers, including date of transaction, a unique transaction id, and the product area id.  Sales and number of items for each product area are aggregated.",customer_id,Unique ID for each customer
+,,transaction_date,Date the transaction occurred (April 1st 2020 to September 30th 2020)
+,,transaction_id,Unique ID for each transaction
+,,product_area_id,Numeric representation for the product area shopped in
+,,num_items,Aggregated number of items within the product area
+,,sales_cost,Aggregated sales cost within the product area
+product_areas,"A lookup table mapping product area id in the transaction table, to the product area name",product_area_id,Numeric representation for the product area shopped in
+,,product_area_name,Named representation for the product area shopped in
+,,profit_margin,Percentage profit margin for each product area
+delivery_club_campaign,A table showing which customers received mailers (mailer type and control group) as well as those who signed up for the July 1st 2019 campaign promoting a $100 per year membership which offers free grocery deliveries,customer_id,Unique ID for each customer
+,,campaign_name,Name of the campaign
+,,campaign_date,Date the campaign went live
+,,mailer_type,"Type of mailer the customer received (Mailer 1, Mailer 2, Control Group)"
+,,signup_flag,A 1/0 flag showing if each customer signed up to the membership
+loyalty_scores,A table containing a loyalty score for 400 customers that a consulting company were able to match to their loyalty database that measures the percentage of grocery spend that a customer allocates to this supermarket,customer_id,Unique ID for each customer
+,,customer_loyalty_score,Percentage of customers total grocery spend that is allocated to this supermarket
