@@ -20,10 +20,5 @@ services:
           - $PWD/data:/infile
           - pg_data:/var/lib/postgresql/data/
 
-networks:
-  default:
-    external:
-      name: my-network
-
 volumes:
   pg_data:
